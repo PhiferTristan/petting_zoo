@@ -1,18 +1,16 @@
-# import the python datetime module to help us create a timestamp
-from datetime import date
 from slithering import (Boa, Python, Splitjaw, Sunbeam, Viper)
 from swimming import (Catfish, Koi, Newt, Toad, Turtle)
 from walking import (Alpaca, Goat, Horse, Llama, Sheep)
 
-miss_fuzz = Llama("Miss Fuzz", "domestic llama")
+miss_fuzz = Llama("Miss Fuzz", "domestic llama", "morning")
 
-peaches = Goat("Peaches", "domestic goat")
+peaches = Goat("Peaches", "domestic goat", "morning")
 
-patches = Sheep("Goat", "domestic sheep")
+patches = Sheep("Patches", "domestic sheep", "midday")
 
-alfonz = Alpaca("Alfonz", "domestic alpaca")
+alfonz = Alpaca("Alfonz", "domestic alpaca", "midday")
 
-kaptain = Horse("Kaptain", "Mustang")
+kaptain = Horse("Kaptain", "Mustang", "afternoon")
 
 pybert = Python("Pybert", "Ball Python")
 
@@ -37,3 +35,4 @@ jiraya = Toad("Jiraya", "scroll toad")
 
 print(miss_fuzz.date_added)
 print(jiraya.name)
+print(f'{patches.name} the {patches.species} is available to pet during the {patches.shift} shift.')
