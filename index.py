@@ -16,7 +16,7 @@ miss_fuzz = Llama("Miss Fuzz", "domestic llama", "morning", "Llama Chow")
 peaches = Goat("Peaches", "domestic goat", "morning", "goat chow")
 patches = Sheep("Patches", "domestic sheep", "midday", "sheep chow")
 alfonz = Alpaca("Alfonz", "domestic alpaca", "midday", "alpaca chow")
-kaptain = Horse("Kaptain", "Mustang", "afternoon", "horse feed")
+kaptain = Horse("Kaptain", "Mustang", "afternoon", "horse feed", 123789)
 
 varmint_village.add_animal(miss_fuzz)
 varmint_village.add_animal(peaches)
@@ -69,4 +69,9 @@ for attraction in attractions:
         msg += f"* {animal.name} the {animal.species}\n"
     msg += "\n"
 print(msg)
-# print(critter_cove_list)
+
+kaptain.chip_number = 555783
+print(kaptain.chip_number)
+print(critter_cove.last_critter_added)
+print(varmint_village.last_critter_added)
+print(the_slither_inn.last_critter_added)
