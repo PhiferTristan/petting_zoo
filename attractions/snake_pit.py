@@ -1,14 +1,16 @@
-class SnakePit:
+from . import Attraction
+from movements import Slithering
 
-    def __init__(self, name) -> None:
-        self.attraction_name = name
-        self.description = "slimy, slithering critters to be scared of"
-        self.animals = list()
+class SnakePit(Attraction):
 
-    def add_animal(self, animal):
-        self.animals.append(animal)
+    def __init__(self, name, description) -> None:
+        super().__init__(name, description)
 
-    @property
-    def last_critter_added(self):
-        return f'{self.animals[-1]}'
+    def add_animal_pythonic(self, animal):
+        try:
+            if animal.slither_speed > -1:
+                self.animals.append(animal)
+                print(f"{animal} now lives in {self.attraction_name}")
+        except ArithmeticError as ex:
+            print(f"{animal} doesn\'t belong in {self.attraction_name}")
         
