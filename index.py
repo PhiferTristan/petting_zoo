@@ -1,17 +1,31 @@
-from datetime import date
+from animals import (
+    Boa,
+    Python,
+    Splitjaw,
+    Sunbeam,
+    Viper,
+    Catfish,
+    Koi,
+    Newt,
+    Toad,
+    Turtle,
+    Alpaca,
+    Goat,
+    Horse,
+    Llama,
+    Sheep,
+    Goose
+)
 
-from animals.slithering import (Boa, Python, Splitjaw, Sunbeam, Viper)
-from animals.swimming import (Catfish, Koi, Newt, Toad, Turtle)
-from animals.walking import (Alpaca, Goat, Horse, Llama, Sheep)
 
-from attractions import PettingZoo
-from attractions import SnakePit
-from attractions import Wetlands
+from attractions import PettingZoo, SnakePit, Wetlands
 
 
-varmint_village = PettingZoo("Varmint Village")
-the_slither_inn = SnakePit("The Slither Inn")
-critter_cove = Wetlands("Critter Cove")
+varmint_village = PettingZoo(
+    "Varmint Village", "all the kind and approachable critters"
+)
+the_slither_inn = SnakePit("The Slither Inn", "all the slimy, scary critters")
+critter_cove = Wetlands("Critter Cove", "all the swimming critters")
 
 miss_fuzz = Llama("Miss Fuzz", "domestic llama", "morning", "Llama Chow", 100001)
 peaches = Goat("Peaches", "domestic goat", "morning", "goat chow", 100002)
@@ -42,21 +56,31 @@ neal = Newt("Neal", "Eastern newt", "newt chow", 100012)
 kyle = Koi("Kyle", "Bekko", "bread crumbs", 100013)
 kat = Catfish("Kat", "Blue catfish", "fish feed", 100014)
 jiraya = Toad("Jiraya", "scroll toad", "popsicle", 100015)
+bob = Goose("Bob", "Canada Goose", "watercress sammies", 100016)
 
 critter_cove.add_animal(john)
 critter_cove.add_animal(neal)
 critter_cove.add_animal(kyle)
 critter_cove.add_animal(kat)
 critter_cove.add_animal(jiraya)
+critter_cove.add_animal(bob)
 
-print(f'{patches.name} the {patches.species} is available to pet during the {patches.shift} shift.')
+# print(
+#     f"{patches.name} the {patches.species} is available to pet during the {patches.shift} shift."
+# )
 
-for animal in varmint_village.animals:
-    print(f'You can find {animal.name} the {animal.species} in {varmint_village.attraction_name}.')
-for animal in the_slither_inn.animals:
-    print(f'You can find {animal.name} the {animal.species} in {the_slither_inn.attraction_name}.')
-for animal in critter_cove.animals:
-    print(f'You can find {animal.name} the {animal.species} in {critter_cove.attraction_name}.')
+# for animal in varmint_village.animals:
+#     print(
+#         f"You can find {animal.name} the {animal.species} in {varmint_village.attraction_name}."
+#     )
+# for animal in the_slither_inn.animals:
+#     print(
+#         f"You can find {animal.name} the {animal.species} in {the_slither_inn.attraction_name}."
+#     )
+# for animal in critter_cove.animals:
+#     print(
+#         f"You can find {animal.name} the {animal.species} in {critter_cove.attraction_name}."
+#     )
 
 # for animal in critter_cove.animals:
 #     print(f"* {animal.name} the {animal.species}")
@@ -72,12 +96,23 @@ for attraction in attractions:
 print(msg)
 
 kaptain.chip_number = 555783
-print(kaptain.chip_number)
-print(critter_cove.last_critter_added)
-print(varmint_village.last_critter_added)
-print(the_slither_inn.last_critter_added)
+# print(kaptain.chip_number)
+# print(critter_cove.last_critter_added)
+# print(varmint_village.last_critter_added)
+# print(the_slither_inn.last_critter_added)
 
-print(miss_fuzz.feed_llama())
-print(miss_fuzz.feed())
-print(kat.feed())
-print(val.feed())
+# print(miss_fuzz.feed_llama())
+# print(miss_fuzz.feed())
+# print(kat.feed())
+# print(val.feed())
+dolly = Llama("Dolly", "mini llam", "morning", "hay", 100017)
+snappy = Toad("Snappy", "scroll toad", "flies", 100018)
+goatsie = Goose("Goatsie", "domestic goat", "goat feed", 100018)
+
+varmint_village.add_animal_pythonic(dolly)
+varmint_village.add_animal_type_check(dolly)
+varmint_village.add_animal_pythonic(snappy)
+dolly.run()
+
+for animal in varmint_village.animals:
+    print(animal)
